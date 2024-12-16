@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="direction: rtl;" class="wrapper">
+    <!-- Content Wrapper. Contains page content -->
+    <div   class="content-wrapper p-5">
+      <!-- Content Header (Page header) -->
+        <div class="card card-danger">
+          <div class="card-header"><h3 class="card-title">حذف الكتاب</h3></div>
+        <form method="POST"  enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="row">
+            <p class="p-3">هل تريد حذف الكتاب ؟</p>
+          </div>
+          <div class="card-footer">
+            <button type="submit"  class="btn btn-danger">حذف</button>
+            <a href="{% url 'index' %}" type="button"  class="btn btn-success">تراجع</a>  
+          </div>
+        </form>
+        </div>
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--اطار عمل البوتستراب مخزن على شكل ملف css-->
+    <link href="./CSS/bootstrap.min.css" rel="stylesheet" >
+    <title>Document</title>
+    <style>
+        body::before {
+            content: '' ;
+            display: block;
+            height: 60px ;
+        }
+    </style>
+</head>
+<body>
+    <!--NAVBAR--> 
+    <!--
+        navbar صف النافبار لتصريح عن ناف بار في الموقع
+        navbar-expand لاظهار عناصر النافبار
+        (-md -lg - sm) حدود لاظهار العناصر
+        bg لون الخلفية
+        -dark الوضع المظلم
+        text صف النصوص للتحكم باللون ونوع الخط
+        fixed-top يثبت القائمة في الاعلى دائما مهما تحركنا في الصفحة
+     -->
+    <div class="navbar navbar-expand-md bg-dark navbar-dark text-white fixed-top">
+        <!--
+            container لوضع العناصر ضمن حاوية في وسط الصفحة
+        -->
+        <div class="container">
+            <!--
+                -brand تضع الكلمة على شكل لوغو للصفحة او عنوان رئيسي للصفحة
+            -->
+            <a href="#" class="navbar-brand">First Bootstrap</a>
+            <!--
+                -toggler لتجميع الازرار داخل زر واحد في حال تصغير الصفحة
+                ولدينا خصائص ضمن تاغ البوتون :
+                data-bs صف ضمن البوتستراب
+                -toggler='collapse' لتجميع الازرار ضمن خذا الزر
+                -target = '#something' الاي دي الخاص بمجموعة الازرار
+            -->
+            <button class="navbar-toggler" 
+            type="button"
+             data-bs-toggle="collapse"
+              data-bs-target="#mainmenu">
+            
+              <!--
+                -icon لإعطائه شكل الثلاث نقاط كمجموعة خيارات
+              -->
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                        <!--
+                            collapse تجميعة عناصر
+                            navbar-collapse تجميعة عناصر ضمن الناف بار
+                        -->        
+
+                        <div class="collapse navbar-collapse" id="mainmenu">            
+                        <!--
+                           navbar-nav  للتاكيد على ان هذه اليو ال قائمة ضمن النافبار بحيث تاخذ تنسيق مناسب
+                           ms 'marging start'  لتعطي القائمة حدود تلقائية اثناء تكبير او تصغير الصفحة 
+                        -->
+                            <ul class="navbar-nav ms-auto">
+                                <!--
+                                    nav-item للتاكيد ان هذا الاي ال هو عنصر للناف بار فياخذ تنسيق مناسب
+                                    nav-link للتاكيد ان هذا ال ا هو رابط للناف بار فياخذ تنسيق مناسب
+                                -->                
+                                <li class="nav-item"><a href="#hero" class="nav-link">Get Started</a></li>
+                                <li class="nav-item"><a href="#cards" class="nav-link">Cards</a></li>                
+                                <li class="nav-item"><a href="#faq" class="nav-link">ASK US</a></li>                
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Learn </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#learn" class="nav-link dropdown-item"><span class="text-dark">Learn Bootstrp</span></a></li>
+                                        <li><a href="#next" class="nav-link dropdown-item"><span class="text-dark">Where to go next</span></a></li>                
+                                    </ul>
+                                </li>            
+                            </ul>        
+                        </div>        
+                    </div>    
+                </div>
+    <!--END NAVBAR-->
+    
+
+    <!--SECTION HERO -->
+    <!--
+        py 'padding on the Y (TOP & BOTTOM)' - 1 , 2 ,3 , ...
+        text-(lg-md-sm)-start لجعل الكلام يبدا من يسار الصفحة عند مساحة معينة  
+    -->
+    <section id="hero" class="bg-dark text-light text-center py-5 text-md-start">
+        <div class="container">
+            <!--
+                d طريقة عرض للعناصر- (lg-md-sm) - flex بشكل حر وسلس 
+                align-items محاذاة طولية
+                justify-content محاذاة عرضية
+            -->
+            <div class="d-md-flex align-items-center justify-content-center">
+                <div class="py-5">
+                    <!--
+                        display اظهار للنصوص - size(1,2,3,..)
+                        text-(
+                            info سماوي
+                            primary ازرق
+                            secondary رمادي
+                            warning اصفر
+                            danger أحمر
+                        )
+                    -->
+                    <h1 class="display-3">Learn <span class="text-info"> Bootstrap</span></h1>
+                    <!--
+                        lead خط واضح وعريض للنص
+                    -->
+                    <p class="py-1 lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum et quod, nihil id tempora soluta commodi rerum, voluptatum aliquam illo quae dignissimos, possimus aliquid recusandae dolore facere dolor animi ducimus!</p>
+                    <!--
+                        btn التعريق بزر
+                        btn- info , danger ,....
+                    -->
+                    <button class="btn btn-info">Get Started</button>
+                </div>
+                <div>
+                    <!--
+                        img-fluid التعريف بصورة حرةالحركة
+                        d - (lg,md,sm) - block اظهارها على شكل كتلة وليس عنصر عند حد معين
+                    -->
+                    <img class=" img-fluid d-md-block " src="/IMG/undraw_undraw_undraw_team_effort_7w2e_bb6b_2vmj.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END OF SECTION-->
+
+    <!--Servecis-->
+
+    <section class="py-5" id="cards">
+        <div class="container">
+            <!--
+                row للنعريف بصف سنضع بداخله اعمدة
+            -->
+            <div class="row">
+                <!--
+                    col-(lg-md-sm) التعريف بأعمدة
+                -->
+                <div class="col-md">
+                    <!--
+                        card التعريف بحاوية على شكل بطاقة
+                    -->
+                    <div class="card bg-dark text-light mb-3">
+                        <!--
+                            card-img التعريف بصورة لبطاقةلتاخذ نمط وتنسيق مناسب
+                        -->
+                        <img src="https://picsum.photos/300/300" alt="" class="card-img">
+                        <!--
+                            card-body للتعريف بجسم البطاقة الذي سنكتب ونضيف عنصر فيه
+                        -->
+                        <div class="card-body text-center">
+                            <!--
+                                card-title للتعريف بنص انه عنوان للبطاقة
+                            -->
+                            <h4 class="card-title"><span class="text-info display-6">Info</span></h4>
+                            <!--
+                                card-text للتعريف بنص البطاقة
+                            -->
+                            <p class="card-text lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur saepe minus officia! Exercitationem, iste reiciendis. Quis, sapiente corporis quam labore, quia, veniam possimus voluptatem rem fuga ex perferendis sed doloremque?</p>
+                            <a href="" class="btn btn-info">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light mb-3">
+                        <img src="https://picsum.photos/300/300" alt="" class="card-img">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"><span class="text-danger display-6">Danger</span></h4>
+                            <div class="card-text lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur saepe minus officia! Exercitationem, iste reiciendis. Quis, sapiente corporis quam labore, quia, veniam possimus voluptatem rem fuga ex perferendis sed doloremque?</div>
+                            <a href="" class="btn btn-danger">Learn More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light mb-3">
+                        <img src="https://picsum.photos/300/300" alt="" class="card-img">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"><span class="text-warning display-6">Warning</span></h4>
+                            <div class="card-text lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur saepe minus officia! Exercitationem, iste reiciendis. Quis, sapiente corporis quam labore, quia, veniam possimus voluptatem rem fuga ex perferendis sed doloremque?</div>
+                            <a href="" class="btn btn-warning">Learn More</a>
+
+                        </div>
+                    </div>
+                </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END Servies-->
+
+    <section id="learn" class="py-5">
+        <div class="container">
+            <div class="row align-item-center justify-content-center">
+                <div class="col-md">
+                    <img src="./IMG/undraw_undraw_undraw_completion_iqwr_-1-_i0cm_-1-_dai9.svg" alt="" class="img-fluid">
+                </div>
+                <div class="col-md">
+                    <h2>Learn the Basic</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eius ut magnam velit, nesciunt reprehenderit atque sapiente est at fugiat, ad quod quam. Molestiae cum asperiores odit! Voluptate, reiciendis labore.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id, a iste voluptates, temporibus voluptas accusantium, perferendis neque voluptatibus debitis consequatur molestias autem nobis dolorem reiciendis porro itaque quas tenetur!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="next" class="py-5 bg-dark text-light">
+        <div class="container">
+            <!--
+                flex-row-reverse لعكس محتويات الراو او عكس ترتيب محتويات الراو
+            -->
+            <div class="row align-item-center justify-content-center flex-row-reverse">
+                <div class="col-md">
+                    <img src="./IMG/undraw_undraw_undraw_users_per_minute_1e4q_t22j_-1-_2ulq.svg" alt="" class="img-fluid">
+                </div>
+                <div class="col-md">
+                    <h2>Where To Go Next</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eius ut magnam velit, nesciunt reprehenderit atque sapiente est at fugiat, ad quod quam. Molestiae cum asperiores odit! Voluptate, reiciendis labore.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla id, a iste voluptates, temporibus voluptas accusantium, perferendis neque voluptatibus debitis consequatur molestias autem nobis dolorem reiciendis porro itaque quas tenetur!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-3">
+                Frequently Asked
+            </h2>
+            <div class="accordion accordion-flush" id="bt-faq">
+                <div class="accordion-item">
+                    <h5 class="accordion-header" id="ques-1">
+                        <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#a-1">
+                           <h4>Question 1</h4>
+                        </button>
+                        <!--
+                            data-bs-parent تعرف على أن هذا الايتم خاص بهئا الاكورديون وذلك لاضافة خصتئص وصفات الاكورديون
+                        -->
+                    </h5>
+                    <div class="accordion-collapse collapse p-3" id="a-1" data-bs-parent="#bt-faq">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam, alias recusandae, magnam delectus velit exercitationem id odit repellat mollitia asperiores ullam officiis. Fuga distinctio et illum necessitatibus deserunt unde.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h5 class="accordion-header" id="ques-2">
+                        <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#a-2">
+                           <h4>Question 2</h4>
+                        </button>
+                    </h5>
+                    <div class="accordion-collapse collapse p-3" id="a-2" data-bs-parent="#bt-faq">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam, alias recusandae, magnam delectus velit exercitationem id odit repellat mollitia asperiores ullam officiis. Fuga distinctio et illum necessitatibus deserunt unde.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h5 class="accordion-header" id="ques-3">
+                        <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#a-3">
+                           <h4>Question 3</h4>
+                        </button>
+                    </h5>
+                    <div class="accordion-collapse collapse p-3" id="a-3" data-bs-parent="#bt-faq">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam, alias recusandae, magnam delectus velit exercitationem id odit repellat mollitia asperiores ullam officiis. Fuga distinctio et illum necessitatibus deserunt unde.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+
+    <!--Footer-->
+    <footer class="py-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead">
+                Copyright &copy; 2023 Kareem Al-harkeh 
+            </p>
+       
+            <a href="#" class="position-absolute bottom-0 end-0 p-3 ">
+                <i class="bi bi-arrow-up-circle h2">UP</i>
+            </a>
+        </div> 
+    </footer>
+
+    <script src="./JS/bootstrap.bundle.min.js" ></script>
+</body>
+</html>
